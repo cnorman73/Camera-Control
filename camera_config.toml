@@ -1,0 +1,6 @@
+# This TOML file contains configuration information for the camera application
+# Flogistix / Commaris TDLAS RGB payload
+# C. Norman cnorman@enyuare.com
+
+[RGBCamera]
+device_port = "/dev/ttyS1"
