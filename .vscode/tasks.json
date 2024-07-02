@@ -38,6 +38,17 @@
                 "reveal": "always",
                 "panel": "new"
             }
+        },
+        {
+            "label": "Run Program",
+            "type": "shell",
+            "command": "${workspaceFolder}/build/camera",
+            "args": ["snap"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
         }
     ]
 }

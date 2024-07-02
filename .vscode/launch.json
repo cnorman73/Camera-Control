@@ -1,16 +1,12 @@
 {
-    // Use IntelliSense to learn about possible attributes.
     "version": "0.2.0",
     "configurations": [
-        
         {
             "name": "Debug Project",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/commaris",
-            "args": [
-                "-g"
-            ],
+            "program": "${workspaceFolder}/build/camera",
+            "args": ["-g"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
@@ -23,7 +19,28 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "CMake Build", // Ensure this matches the label of a build task in tasks.json
+            "preLaunchTask": "CMake Build",
+            "miDebuggerPath": "/usr/bin/gdb"
+        },
+        {
+            "name": "Run Program with Snap",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/camera",
+            "args": ["snap"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "CMake Build",
             "miDebuggerPath": "/usr/bin/gdb"
         }
     ]

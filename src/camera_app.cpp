@@ -23,6 +23,7 @@ CameraApp::CameraApp() {
 
 int CameraApp::init() {
 
+    #if 0
     // Other variables
     std::string rgb_camera_device_port; 
 
@@ -45,6 +46,8 @@ int CameraApp::init() {
     }
     camera.setupPort(rgb_camera_device_port);
     std::cout << "PayloadApp: Initialized" << std::endl;
+
+    #endif
     return 0;
 }
 
